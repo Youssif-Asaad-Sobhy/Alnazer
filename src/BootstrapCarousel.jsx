@@ -14,8 +14,7 @@ export class BootstrapCarousel extends Component {
         this.props.onSelectSection(filteredData);
     };
     render() {
-        const { data } = this.props;
-        const { filteredData } = this.state;
+        
 
         return (
             <div>

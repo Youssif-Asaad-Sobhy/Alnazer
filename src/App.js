@@ -1,17 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import pfp from './pfp.jpg';
-import img1 from './01.jpg';
-import img4 from './04.jpg';
-import img5 from './05.jpg';
-import img6 from './06.jpg';
-import img2 from './02.jpg';
-import img3 from './03.jpg';
 import BootstrapCarousel from './BootstrapCarousel';
 import MovieCard from './MovieCard';
 import data from '../src/data.json';
-import { Card } from 'react-bootstrap';
 
 // 4038db44
 
@@ -30,13 +22,13 @@ function App() {
     // function handleKeyPress(event) {}
 
     // let output = searchTerm.replace(/\s+/g, '');
-    const [json, setJson] = useState([]);
+    const [ setJson] = useState([]);
 
     useEffect(() => {
         // Set the data from the imported JSON file
         setJson(data);
         // console.log(data.map())
-    }, []);
+    }, [setJson]);
     const handleClick = (code) => {
         // Accept code as parameter
         const productCode = encodeURIComponent(`Product code: ${code}`);
@@ -83,7 +75,8 @@ function App() {
         <div className="App">
             <nav className="navbar navbaar sticky-top">
                 <div className="container-fluid ms-3">
-                    <a className="navbar-brand" href="#">
+                    {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                    <a className="navbar-brand" href="">
                         <div className="logo">
                             Alnazer <span className={'shaker'}>.</span>
                         </div>
