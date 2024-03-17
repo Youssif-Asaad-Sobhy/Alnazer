@@ -1,17 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState, useEffect } from 'react';
 import pfp from './pfp.jpg';
-import img1 from './01.jpg';
-import img4 from './04.jpg';
-import img5 from './05.jpg';
-import img6 from './06.jpg';
-import img2 from './02.jpg';
-import img3 from './03.jpg';
 import BootstrapCarousel from './BootstrapCarousel';
 import MovieCard from './MovieCard';
 import data from '../src/data.json';
-import { Card } from 'react-bootstrap';
 
 // 4038db44
 
@@ -30,17 +22,17 @@ function App() {
     // function handleKeyPress(event) {}
 
     // let output = searchTerm.replace(/\s+/g, '');
-    const [json, setJson] = useState([]);
+    // const [ json,setJson] = useState([]);
 
-    useEffect(() => {
-        // Set the data from the imported JSON file
-        setJson(data);
-        // console.log(data.map())
-    }, []);
+    // useEffect(() => {
+    //     // Set the data from the imported JSON file
+    //     setJson(data);
+    //     // console.log(data.map())
+    // }, []);
     const handleClick = (code) => {
         // Accept code as parameter
         const productCode = encodeURIComponent(`Product code: ${code}`);
-        const whatsappNumber = '+2001153596349';
+        const whatsappNumber = '+201559624428';
         const url = `https://wa.me/${whatsappNumber}?text=${productCode}`;
 
         window.open(url, '_blank');
@@ -74,13 +66,17 @@ function App() {
         setFilteredData(filteredData);
     };
 
-    let input = document.getElementsByClassName('search');
-
+    const [searchTerm, setSearchTerm] = useState('');
+    useEffect(() => {
+        const FilteredData = data.Main.filter((item) => item.code.includes(searchTerm) || item.title.includes(searchTerm));
+        setFilteredData(FilteredData);
+    }, [searchTerm]);
     return (
         <div className="App">
             <nav className="navbar navbaar sticky-top">
                 <div className="container-fluid ms-3">
-                    <a className="navbar-brand" href="#">
+                    {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
+                    <a className="navbar-brand" href="">
                         <div className="logo">
                             Alnazer <span className={'shaker'}>.</span>
                         </div>
@@ -102,23 +98,23 @@ function App() {
                     </div>
                 </div>
             </nav>
+            <div className={'container'}>
+                <BootstrapCarousel
+                    data={data}
+                    sections={data.Sections}
+                    onSelectSection={handleSectionSelect}
+                />
+            </div>
             <div className={'container mt-5 me-5'}>
                 <div className="search-container mt-3">
                     <input
                         placeholder={'Search...'}
                         className={'search'}
-                        // value={searchTerm}
-                        // onChange={(e) => setSearchTerm(e.target.value)}
-                        // onKeyPress={handleKeyPress}
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         defaultValue={''}
                     />
                 </div>
-            </div>
-            <div className={'container'}>
-                <BootstrapCarousel
-                    data={data}
-                    onSelectSection={handleSectionSelect}
-                />
             </div>
             <div className="container-fluid con">
                 {filteredData.map((card, index) => (
