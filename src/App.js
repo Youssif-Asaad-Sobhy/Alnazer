@@ -22,13 +22,13 @@ function App() {
     // function handleKeyPress(event) {}
 
     // let output = searchTerm.replace(/\s+/g, '');
-    const [ setJson] = useState([]);
+    // const [ json,setJson] = useState([]);
 
-    useEffect(() => {
-        // Set the data from the imported JSON file
-        setJson(data);
-        // console.log(data.map())
-    }, [setJson]);
+    // useEffect(() => {
+    //     // Set the data from the imported JSON file
+    //     setJson(data);
+    //     // console.log(data.map())
+    // }, []);
     const handleClick = (code) => {
         // Accept code as parameter
         const productCode = encodeURIComponent(`Product code: ${code}`);
