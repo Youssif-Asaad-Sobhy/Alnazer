@@ -5,10 +5,8 @@ export function MovieCard({ card, handleClick}){
     
     return (
         <div className="movie">
+            <div></div>
             <div>
-                {/* <p>{card.section}</p> */}
-            </div>
-            {/* <div className='container'> */}
                 <Carousel style={{ width: '300px', height: '100%' }}>
                     {card?.imgs?.map((item, index) => (
                         <Carousel.Item style={{width:'100%',height:'100%'}} key={index}>
@@ -21,7 +19,7 @@ export function MovieCard({ card, handleClick}){
                         </Carousel.Item>
                     ))}
                 </Carousel>
-            {/* </div>   */}
+            </div>  
             <div>
                 <span>{card.price}</span>
                 <h5>{card.title}</h5>
