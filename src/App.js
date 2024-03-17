@@ -40,7 +40,7 @@ function App() {
     const handleClick = (code) => {
         // Accept code as parameter
         const productCode = encodeURIComponent(`Product code: ${code}`);
-        const whatsappNumber = '+2001153596349';
+        const whatsappNumber = '+201559624428';
         const url = `https://wa.me/${whatsappNumber}?text=${productCode}`;
 
         window.open(url, '_blank');
@@ -74,8 +74,11 @@ function App() {
         setFilteredData(filteredData);
     };
 
-    let input = document.getElementsByClassName('search');
-
+    const [searchTerm, setSearchTerm] = useState('');
+    useEffect(() => {
+        const FilteredData = data.Main.filter((item) => item.code.includes(searchTerm) || item.title.includes(searchTerm));
+        setFilteredData(FilteredData);
+    }, [searchTerm]);
     return (
         <div className="App">
             <nav className="navbar navbaar sticky-top">
@@ -102,23 +105,23 @@ function App() {
                     </div>
                 </div>
             </nav>
+            <div className={'container'}>
+                <BootstrapCarousel
+                    data={data}
+                    sections={data.Sections}
+                    onSelectSection={handleSectionSelect}
+                />
+            </div>
             <div className={'container mt-5 me-5'}>
                 <div className="search-container mt-3">
                     <input
                         placeholder={'Search...'}
                         className={'search'}
-                        // value={searchTerm}
-                        // onChange={(e) => setSearchTerm(e.target.value)}
-                        // onKeyPress={handleKeyPress}
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
                         defaultValue={''}
                     />
                 </div>
-            </div>
-            <div className={'container'}>
-                <BootstrapCarousel
-                    data={data}
-                    onSelectSection={handleSectionSelect}
-                />
             </div>
             <div className="container-fluid con">
                 {filteredData.map((card, index) => (

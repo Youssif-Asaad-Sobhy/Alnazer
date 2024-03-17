@@ -1,22 +1,27 @@
+import Carousel from 'react-bootstrap/Carousel';
 import React from 'react';
-const MovieCard = ({ card, handleClick}) => {
+export function MovieCard({ card, handleClick}){
     
     
     return (
         <div className="movie">
             <div>
-                <p>{card.section}</p>
+                {/* <p>{card.section}</p> */}
             </div>
-            <div>
-                <img
-                    src={
-                        card.img !== 'N/A'
-                            ? card.img
-                            : 'https://via.placeholder.com/400'
-                    }
-                    alt={card.img}
-                />
-            </div>
+            {/* <div className='container'> */}
+                <Carousel style={{ width: '100%', height: '100%' }}>
+                    {card?.imgs?.map((item, index) => (
+                        <Carousel.Item style={{width:'100%',height:'100%'}} key={index}>
+                            <img
+                                className="d-block w-100 img-fluid"
+                                style={{width:'100%',height:'100%'}}
+                                src={item}
+                                alt={`Slide ${index}`}
+                            />
+                        </Carousel.Item>
+                    ))}
+                </Carousel>
+            {/* </div>   */}
             <div>
                 <span>{card.price}</span>
                 <h5>{card.title}</h5>
@@ -29,7 +34,7 @@ const MovieCard = ({ card, handleClick}) => {
                         Oder Now
                     </button>
                 </center>
-            </div>
+            </div> 
         </div>
     );
 };

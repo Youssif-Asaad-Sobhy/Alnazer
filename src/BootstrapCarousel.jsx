@@ -13,8 +13,6 @@ export class BootstrapCarousel extends Component {
         const filteredData = this.props.data.Main.filter((item) => item.section === section);
         this.props.onSelectSection(filteredData);
     };
-    
-
     render() {
         const { data } = this.props;
         const { filteredData } = this.state;
@@ -31,18 +29,19 @@ export class BootstrapCarousel extends Component {
 
                 <div className="container">
                     <Carousel>
-                        {/* Add onClick event handlers to filter data */}
-                        <Carousel.Item onClick={() => this.filterData('Light')}>
-                            <img
-                                className="d-block w-100 img-fluid"
-                                src={'https://i.ibb.co/nrb214v/FB-IMG-1708888214822.jpg'}
-                                alt=""
-                            />
-                            <Carousel.Caption>
-                                <h3>Lights</h3>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                        <Carousel.Item onClick={() => this.filterData('Box')}>
+                        {this.props.sections.map((item) => (
+                            <Carousel.Item onClick={() => this.filterData(item.title)}>
+                                <img
+                                    className="d-block w-100 img-fluid"
+                                    src={item.img}
+                                    alt={item.title}
+                                />
+                                <Carousel.Caption>
+                                    <h3>{item.title}</h3>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+                        ))}
+                        {/* <Carousel.Item onClick={() => this.filterData('Box')}>
                             <img
                                 className="d-block w-100 img-fluid"
                                 src={'https://i.ibb.co/BZZncGD/FB-IMG-1708888511880.jpg'}
@@ -71,7 +70,7 @@ export class BootstrapCarousel extends Component {
                             <Carousel.Caption>
                                 <h3>HandMade</h3>
                             </Carousel.Caption>
-                        </Carousel.Item>
+                        </Carousel.Item> */}
                     </Carousel>
                 </div>
             </div>
