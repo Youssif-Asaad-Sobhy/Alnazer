@@ -61,6 +61,7 @@ function App() {
     // // }
     // console.log(data);
     // console.log(jsonData);
+    const [details,setDetails] = useState(Array.from({length:data.Main.length},()=>false));
     const [filteredData, setFilteredData] = useState(data.Main);
     const handleSectionSelect = (filteredData) => {
         setFilteredData(filteredData);
@@ -71,6 +72,11 @@ function App() {
         const FilteredData = data.Main.filter((item) => item.code.includes(searchTerm) || item.title.includes(searchTerm));
         setFilteredData(FilteredData);
     }, [searchTerm]);
+    const handleDetailsClick = (index) => {
+        const newDetails = [...details];
+        newDetails[index] = !newDetails[index];
+        setDetails(newDetails);
+    };
     return (
         <div className="App">
             <nav className="navbar navbaar sticky-top">
@@ -106,7 +112,7 @@ function App() {
                 />
             </div>
             <div className={'container mt-5 me-5'}>
-                <div className="search-container mt-3">
+                <div className="search-container mt-3" style={{display:'flex',justifyContent:"center"}}>
                     <input
                         placeholder={'Search...'}
                         className={'search'}
@@ -116,13 +122,35 @@ function App() {
                     />
                 </div>
             </div>
-            <div className="container-fluid con">
+            <div className="container con m-5">
                 {filteredData.map((card, index) => (
-                    <div key={index}>
+                    <div key={index} class="m-2">
                         <MovieCard
                             card={card}
-                            handleClick={() => handleClick(card.code)}
                         />
+                        <div>
+                        {details[index]&&<>
+                        <center>
+                        <p style={{justifyContent:"end",display:"flex",width:'300px',margin:'0 auto'}}>{card.title}</p>
+                        <p style={{justifyContent:"center",display:"flex"}}>{card.price}</p>
+                        <div class="d-grid gap-1 d-sm-block d-md-block">
+                            <button
+                                type="button"
+                                name="lol"
+                                class="btn btn-success w-full"
+                                onClick={()=>handleClick(card.code)}
+                                >
+                                طلب الان
+                            </button>
+                            <button type="button" name='lolen' class="btn btn-danger" onClick={()=>handleDetailsClick(index)}>اغلاق التفاصيل</button>
+                                    </div>
+                        </center>
+                        </>
+                    }
+                        {!details[index]&&
+                            <button type="button" name='lolen' class="con col-sm-12 btn btn-info" onClick={()=>handleDetailsClick(index)}>عرض التفاصيل</button>
+                        }
+                    </div> 
                     </div>
                 ))}
             </div>
