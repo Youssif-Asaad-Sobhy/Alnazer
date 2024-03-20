@@ -83,8 +83,8 @@ function App() {
     setDetails(newDetails);
   };
   return (
-    <div className="App">
-      <nav className="navbar navbaar sticky-top">
+    <div className="App ">
+      <nav className="navbar navbaar sticky-top ">
         <div className="container-fluid ms-3">
           {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
           <a className="navbar-brand" href="">
@@ -126,7 +126,7 @@ function App() {
           />
         </div>
       </div>
-      <div className="container con m-3 d-flex justify-content-center">
+      <div className="container con ">
         {data.Sections.map((section) => (
           <>
             <div className="container-fluid mt-5">
