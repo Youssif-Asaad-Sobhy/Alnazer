@@ -5,62 +5,16 @@ import BootstrapCarousel from "./BootstrapCarousel";
 import MovieCard from "./MovieCard";
 import data from "../src/data.json";
 
-// 4038db44
 
 function App() {
-  // const [movies, setMovies] = useState([]);
-  // const [searchTerm, setSearchTerm] = useState('');
-  // const searchMovies = async (title) => {
-  //     const response = await fetch(`${apiLInk}&s=${title}`);
-  //     const data = await response.json();
-  //     setMovies(data.Search);
-  // };
-  // useEffect(() => {
-  //     searchMovies(data);
-  // }, []);
-
-  // function handleKeyPress(event) {}
-
-  // let output = searchTerm.replace(/\s+/g, '');
-  // const [ json,setJson] = useState([]);
-
-  // useEffect(() => {
-  //     // Set the data from the imported JSON file
-  //     setJson(data);
-  //     // console.log(data.map())
-  // }, []);
   const handleClick = (code) => {
-    // Accept code as parameter
     const productCode = encodeURIComponent(`Product code: ${code}`);
-    const whatsappNumber = "+201559624428";
+    const whatsappNumber = "+201032231491";
     const url = `https://wa.me/${whatsappNumber}?text=${productCode}`;
 
     window.open(url, "_blank");
   };
 
-  // const [jsonData, setJsonData] = useState(null);
-  // useEffect(() => {
-  //     fetch(data)
-  //         .then((response) => {
-  //             if (!response.ok) {
-  //                 throw new Error('Network response was not ok');
-  //             }
-  //             return response.json();
-  //         })
-  //         .then((data) => {
-  //             console.log(data);
-  //             setJsonData(data);
-  //         })
-  //         .catch((error) =>
-  //             console.error('Error fetching JSON data:', error)
-  //         );
-  // }, []);
-
-  // // if (!jsonData) {
-  // //     return <div>Loading...</div>;
-  // // }
-  // console.log(data);
-  // console.log(jsonData);
   const [details, setDetails] = useState(
     Array.from({ length: data.Main.length }, () => false)
   );
@@ -89,7 +43,7 @@ function App() {
           {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
           <a className="navbar-brand" href="">
             <div className="logo">
-              Alnazer <span className={"shaker"}>.</span>
+            ALnazer Online Store <span className={"shaker"}>.</span>
             </div>
           </a>
           <div className={"joe  pe-3"}>
