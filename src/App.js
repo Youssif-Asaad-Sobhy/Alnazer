@@ -43,7 +43,7 @@ function App() {
           {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
           <a className="navbar-brand" href="">
             <div className="logo">
-            ALnazer Online Store <span className={"shaker"}>.</span>
+            ALnazer shop <span className={"shaker"}>.</span>
             </div>
           </a>
           <div className={"joe  pe-3"}>

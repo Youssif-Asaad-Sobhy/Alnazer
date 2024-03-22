@@ -21,7 +21,7 @@ export class BootstrapCarousel extends Component {
                 <div className="container-fluid mt-5">
                     <div className="row title" style={{ marginBottom: '20px' }}>
                         <div className="col-sm-12 btn btn-warning">
-                            ❤️الاقسام 
+                            ❤️sections
                         </div>
                     </div>
                 </div>
