@@ -37,7 +37,8 @@
         "https://i.ibb.co/YjXdHkj/photo-15-2024-03-24-10-04-45.jpg",
         "https://i.ibb.co/ZmRfJPD/photo-26-2024-03-24-10-04-45.jpg"
       ]
-    },{
+    },
+    {
       "code": "7768",
       "price": "210E",
       "section": "Decoration",
@@ -57,10 +58,10 @@
       "imgs": [
         "https://i.ibb.co/r6jL3C9/photo-3-2024-03-24-10-04-45.jpg",
         "https://i.ibb.co/r6jL3C9/photo-3-2024-03-24-10-04-45.jpg",
-        "https://i.ibb.co/XFXY1K3/photo-4-2024-03-24-10-04-45.jpg",
-        null
+        "https://i.ibb.co/XFXY1K3/photo-4-2024-03-24-10-04-45.jpg"
       ]
-    },{
+    },
+    {
       "code": "7775",
       "price": "200E",
       "section": "Decoration",
@@ -70,7 +71,8 @@
         "https://i.ibb.co/GtM5DkM/photo-5-2024-03-24-10-56-15.jpg",
         "https://i.ibb.co/HGgSqJJ/photo-2-2024-03-24-10-56-15.jpg"
       ]
-    },{
+    },
+    {
       "code": "7767",
       "price": "210E",
       "section": "Decoration",
@@ -103,7 +105,8 @@
         "https://i.ibb.co/VLCv1nH/photo-13-2024-03-24-10-04-45.jpg",
         "https://i.ibb.co/6NcsJgK/photo-17-2024-03-24-10-04-45.jpg"
       ]
-    },{
+    },
+    {
       "code": "7642",
       "price": "100E",
       "section": "Decoration",
@@ -126,7 +129,8 @@
         "https://i.ibb.co/wSQfx1c/photo-9-2024-03-24-10-38-25.jpg",
         "https://i.ibb.co/jZXW0gq/photo-7-2024-03-24-10-38-25.jpg"
       ]
-    },{
+    },
+    {
       "code": "7773",
       "price": "250E",
       "section": "Decoration",
@@ -137,7 +141,8 @@
         "https://i.ibb.co/k5H3KpX/photo-3-2024-03-24-10-56-15.jpg",
         "https://i.ibb.co/fYjFTpr/photo-14-2024-03-24-10-56-15.jpg"
       ]
-    },{
+    },
+    {
       "code": "7643",
       "price": "50E",
       "section": "Decoration",
@@ -147,7 +152,8 @@
         "https://i.ibb.co/8jJSPvw/photo-2024-03-24-11-34-21.jpg",
         "https://i.ibb.co/rv8BSX1/photo-2024-03-24-11-34-25.jpg"
       ]
-    },{
+    },
+    {
       "code": "7761",
       "price": "210E",
       "section": "Decoration",
@@ -158,7 +164,8 @@
         "https://i.ibb.co/YfjX38q/photo-16-2024-03-24-10-56-15.jpg",
         "https://i.ibb.co/0G814C9/photo-2024-03-24-11-14-59.jpg"
       ]
-    },{
+    },
+    {
       "code": "7770",
       "price": "210E",
       "section": "Decoration",
@@ -212,7 +219,8 @@
         "https://i.ibb.co/sKkdQ72/photo-5-2024-03-24-10-45-47.jpg",
         "https://i.ibb.co/Rpv6rh0/photo-3-2024-03-24-10-45-47.jpg"
       ]
-    },{
+    },
+    {
       "code": "7628",
       "price": "65E",
       "section": "Decoration",
@@ -233,7 +241,8 @@
         "https://i.ibb.co/txpfPHw/photo-2-2024-03-24-10-38-02.jpg",
         "https://i.ibb.co/dKk7ZhN/photo-4-2024-03-24-10-38-02.jpg"
       ]
-    },{
+    },
+    {
       "code": "7641",
       "price": "65E",
       "section": "Decoration",
@@ -253,7 +262,8 @@
         "https://i.ibb.co/dgQ8VDn/photo-2024-03-24-10-26-18.jpg",
         "https://i.ibb.co/6PgLgFF/photo-2024-03-24-10-26-05.jpg"
       ]
-    },{
+    },
+    {
       "code": "7630",
       "price": "65E",
       "section": "Decoration",
@@ -285,7 +295,8 @@
         "https://i.ibb.co/FgbDvv0/photo-2024-03-24-10-27-27.jpg",
         "https://i.ibb.co/RQ7yMgF/photo-2024-03-24-10-27-32.jpg"
       ]
-    },{
+    },
+    {
       "code": "7640",
       "price": "65E",
       "section": "Decoration",
@@ -1194,6 +1205,10 @@
     {
       "img": "https://i.ibb.co/r6jL3C9/photo-3-2024-03-24-10-04-45.jpg",
       "title": "Decoration"
+    },
+    {
+      "img": "",
+      "title": ""
     },
     {
       "img": "https://i.ibb.co/nrb214v/FB-IMG-1708888214822.jpg",
