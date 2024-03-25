@@ -23,11 +23,11 @@ body {
 }*/
 .logo {
 
-.rubik-scribble-regular {
-    font-family: "Rubik Scribble", system-ui;
-    font-weight: 400;
-    font-style: normal;
-}}
+    .rakkas-regular {
+        font-family: "Rakkas", serif;
+        font-weight: 400;
+        font-style: normal;
+      }}
 .shaker {
     color: red;
     font-size: larger;
@@ -51,6 +51,11 @@ body {
 /*    width: 100%;*/
 /*  }*/
 /*}*/
+.rakkas-regular {
+    font-family: "Rakkas", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
 
 .empty {
     width: 100%;
