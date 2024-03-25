@@ -19,19 +19,6 @@ export function MovieCard({ card}){
                     ))}
                 </Carousel>
             </div>  
-            {/* <div>
-                <span>{card.price}</span>
-                <h5>{card.title}</h5>
-                <center>
-                    <button
-                        type="button"
-                        class="btn btn-secondary"
-                        onClick={handleClick}
-                    >
-                        Oder Now
-                    </button>
-                </center>
-            </div>  */}
         </div>
     );
 };
