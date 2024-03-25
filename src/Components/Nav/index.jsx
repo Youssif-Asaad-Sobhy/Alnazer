@@ -7,7 +7,7 @@ export default function Nav()
       {/*  eslint-disable-next-line jsx-a11y/anchor-is-valid*/}
       <a className="navbar-brand" href="">
         <div className="logo rakkas-regular">
-          ALnazer shop <span className={"shaker"}>.</span>
+          ALnazer Store <span className={"shaker"}>.</span>
         </div>
       </a>
       <div className={"joe  pe-3"}>

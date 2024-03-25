@@ -42,6 +42,8 @@ function App() {
   };
   const [filteredData, setFilteredData] = useState(data.Main);
   const handleSectionSelect = (filteredData) => {
+    const newSections = new Set(filteredData.map((item) => item.section));
+    setSections(newSections);
     setFilteredData(filteredData);
   };
   const [searchTerm, setSearchTerm] = useState("");
