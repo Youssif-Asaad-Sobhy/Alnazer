@@ -1,46 +1,44 @@
-import React, { Component } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import React, { Component } from "react";
+import Carousel from "react-bootstrap/Carousel";
 
 export class BootstrapCarousel extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            filteredData: [],
-        };
-    }
-
-    filterData = (section) => {
-        const filteredData = this.props.data.Main.filter((item) => item.section === section);
-        this.props.onSelectSection(filteredData);
+  constructor(props) {
+    super(props);
+    this.state = {
+      filteredData: [],
     };
-    render() {
-        
+  }
 
-        return (
-            <div>
-                <div className="container-fluid mt-5">
-                    <div className="row title" style={{ marginBottom: '20px' }}>
-                        <div className="col-sm-12 btn btn-warning">
-                            ❤️sections
-                        </div>
-                    </div>
-                </div>
+  filterData = (section) => {
+    const filteredData = this.props.data.Main.filter(
+      (item) => item.section === section
+    );
+    this.props.onSelectSection(filteredData);
+  };
+  render() {
+    return (
+      <div>
+        <div className="container-fluid mt-5">
+          <div className="row title" style={{ marginBottom: "20px" }}>
+            <div className="col-sm-12 btn btn-warning">❤️sections</div>
+          </div>
+        </div>
 
-                <div className="container">
-                    <Carousel>
-                        {this.props.sections.map((item) => (
-                            <Carousel.Item onClick={() => this.filterData(item.title)}>
-                                <img
-                                    className="d-block w-100 img-fluid"
-                                    src={item.img}
-                                    alt={item.title}
-                                />
-                                <Carousel.Caption>
-                                    <h3>{item.title}</h3>
-                                </Carousel.Caption>
-                            </Carousel.Item>
-                        ))}
-                        {/* <Carousel.Item onClick={() => this.filterData('Box')}>
+        <div className="container">
+          <Carousel interval={750}>
+            {this.props.sections.map((item) => (
+              <Carousel.Item onClick={() => this.filterData(item.title)}>
+                <img
+                  className="d-block w-100 img-fluid"
+                  src={item.img}
+                  alt={item.title}
+                />
+                <Carousel.Caption>
+                  <h3>{item.title}</h3>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+            {/* <Carousel.Item onClick={() => this.filterData('Box')}>
                             <img
                                 className="d-block w-100 img-fluid"
                                 src={'https://i.ibb.co/BZZncGD/FB-IMG-1708888511880.jpg'}
@@ -70,11 +68,11 @@ export class BootstrapCarousel extends Component {
                                 <h3>HandMade</h3>
                             </Carousel.Caption>
                         </Carousel.Item> */}
-                    </Carousel>
-                </div>
-            </div>
-        );
-    }
+          </Carousel>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default BootstrapCarousel;
