@@ -96,7 +96,11 @@ function App() {
             })}
             <button
               onClick={() => handleShowMore(section)}
-              className="btn btn-primary">Show More</button>
+              className="btn"
+              style={{ backgroundColor: "#44f2a7" }}
+            >
+              تسوق المزيد{" "}
+            </button>
           </>
         ))}
       </div>
