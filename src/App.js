@@ -104,17 +104,6 @@ function App() {
           </>
         ))}
       </div>
-      <div className="parent2">
-      <a href="#" id="goToTopBtn" class="gototopbtn">&#8593;</a>
-      </div>
-      <footer className="mt-3 pt-5 pb-5">
-  <div class="footer-left">
-    <p>Youssif-Asaad-Sobhy❤️</p>
-  </div>
-  <div class="footer-right">
-    <p>&copy; 2024 Developed With ❤️ By Joe.H All rights reserved.</p>
-  </div>
-</footer>
     </div>
   );
 }
