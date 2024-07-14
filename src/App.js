@@ -35,7 +35,7 @@ function App() {
   const handleShowMore = (section) => {
     setSectionNum((prevSectionNum) => {
       const newSectionNum = new Map(prevSectionNum);
-      const newMaxAmount = prevSectionNum.get(section) + 5;
+      const newMaxAmount = prevSectionNum.get(section) + 25;
       newSectionNum.set(section, Math.min(newMaxAmount, 5000));
       return newSectionNum;
     });
